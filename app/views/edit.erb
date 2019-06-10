@@ -3,8 +3,14 @@
     <h1><%=@recipe.ingredients%></h1>
     <form action="/recipes/<%=@recipe.id %>" method="post">
       <input id="hidden" type="hidden" name="_method" value="patch"></input>
+
+      <label for="name">Name:</label>
       <input type="text" name="name"></input>
+
+      <label for="ingredients">Ingredients:</label>
       <input type="text" name="ingredients"></input>
+      
+      <label for="cook_time">Cook Time:</label>
       <input type="text" name="cook_time"></input>
     </form>
   </body>

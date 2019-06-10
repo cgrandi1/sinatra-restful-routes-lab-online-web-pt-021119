@@ -17,12 +17,11 @@ class ApplicationController < Sinatra::Base
 
   post '/recipes' do
     @recipe = Recipe.create(params)
-    binding.pry
     redirect to "/recipes/#{@recipe.id}"
   end
 
    get '/recipes/:id' do
-    #  binding.pry
+      binding.pry
      @recipe = Recipe.find_by(params[:id])
 
      erb :show

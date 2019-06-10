@@ -20,14 +20,16 @@ class ApplicationController < Sinatra::Base
     redirect "/recipes/#{@recipe.id}"
   end
 
-  get '/recipes/:id/edit' do
-    @recipe = Recipe.find_by(id: params[:id])
-    erb :edit
-  end
+
 
    get '/recipes/:id' do
      @recipe = Recipe.find_by(id: params[:id])
      erb :show
+   end
+
+   get '/recipes/:id/edit' do
+     @recipe = Recipe.find_by(id: params[:id])
+     erb :edit
    end
 
   #  post '/recipes' do

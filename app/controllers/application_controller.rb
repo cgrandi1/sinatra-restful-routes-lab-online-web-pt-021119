@@ -26,6 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
    get '/recipes/:id' do
+     "Enchiladas con Salsa Verde"
      @recipe = Recipe.find_by(params[:id])
      erb :show
    end
